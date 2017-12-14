@@ -15,19 +15,21 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/jd"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
         android:src="@drawable/jd"
-        android:layout_margin="10dp"/>
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp" />
+
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/morty"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
         android:src="@drawable/morty"
         android:layout_alignParentEnd="true"
-        android:layout_margin="10dp"
-        android:layout_marginRight="16dp"/>
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp"/>
 
 
     <TextView
@@ -47,17 +49,17 @@
         android:text="+"
         android:layout_marginTop="16dp"
         android:layout_marginLeft="16dp"
-        android:onClick="tscoreUp"/>
+        android:onClick="tScoreUp"/>
 
     <Button
         android:id="@+id/JD_minus"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_alignTop="@+id/JD_plus"
-        android:layout_toEndOf="@+id/JD_plus"
+        android:layout_below="@+id/JD_plus"
         android:text="-"
         android:textSize="20sp"
-        android:onClick="tscoreDown"/>
+        android:layout_marginLeft="16dp"
+        android:onClick="tScoreDown"/>
 
 
     <TextView
@@ -73,13 +75,12 @@
         android:id="@+id/Morty_minus"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_below="@+id/morty"
+        android:layout_below="@+id/Morty_plus"
         android:layout_alignParentRight="true"
         android:text="-"
         android:textSize="20sp"
-        android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
-        android:onClick="jscoreDown"/>
+        android:onClick="jScoreDown"/>
 
     <Button
         android:id="@+id/Morty_plus"
@@ -87,10 +88,11 @@
         android:layout_height="48dp"
         android:layout_below="@+id/jd"
         android:layout_toLeftOf="@+id/Morty_minus"
-        android:layout_alignParentRight="false"
+        android:layout_alignParentRight="true"
         android:text="+"
         android:layout_marginTop="16dp"
-        android:onClick="jscoreUp"/>
+        android:layout_marginRight="16dp"
+        android:onClick="jScoreUp"/>
 
     <TextView
         android:id="@+id/score"
@@ -98,6 +100,7 @@
         android:layout_height="wrap_content"
         android:text="Score"
         android:textAllCaps="true"
+        android:layout_marginTop="100dp"
         android:layout_centerInParent="true"
         android:textSize="50dp"/>
 
@@ -105,7 +108,7 @@
         android:id="@+id/thomasScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
+        android:text="12"
         android:textSize="50dp"
         android:layout_toLeftOf="@+id/hyphen"
         android:layout_below="@+id/score"
@@ -126,9 +129,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/score"
-        android:text=""
+        android:text="12"
         android:textSize="50dp"
         android:layout_toRightOf="@+id/hyphen"
         android:layout_marginLeft="16dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Fact Check"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Statistics"
+        android:layout_alignParentBottom="true"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="Tools"/>
+
 
 </RelativeLayout>
